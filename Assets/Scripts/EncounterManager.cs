@@ -9,7 +9,7 @@ public class EncounterManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (gameObject.player.moving == true) {
+        //if (gameObject.player.moving == true) {
             int encounter_chance = Random.Range(0, 100);
 
             if (SceneManager.GetActiveScene().name == "Whispering Woods")
