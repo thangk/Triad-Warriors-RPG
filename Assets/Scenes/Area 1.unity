@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909370392990027273, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.0000305
+      value: -15.000061
       objectReference: {fileID: 0}
     - target: {fileID: 8391422467195126508, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 1813083070}
   - component: {fileID: 1813083069}
   m_Layer: 5
-  m_Name: Enemy 2 (1)
+  m_Name: Enemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 1819585426}
   - component: {fileID: 1819585425}
   m_Layer: 5
-  m_Name: Ally 1 2
+  m_Name: Ally 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
