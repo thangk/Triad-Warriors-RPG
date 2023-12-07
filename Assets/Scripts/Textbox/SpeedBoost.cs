@@ -28,7 +28,7 @@ public class SpeedBoost : MonoBehaviour
     void Update()
     {
         // Check for the "E" key press to activate the speed boost
-        if (Input.GetKeyDown(KeyCode.E) && !isBoosting && !isOnCooldown)
+        if (Input.GetKeyDown(KeyCode.Q) && !isBoosting && !isOnCooldown)
         {
             StartSpeedBoost();
         }
