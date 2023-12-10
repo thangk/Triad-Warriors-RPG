@@ -8,8 +8,8 @@ public class SceneButtons : MonoBehaviour
     
     public void PlayGame()
     {
-        SceneTransitioner.transitionToScene("CharacterSelection");
-        //SceneTransitioner.transitionToScene("Freeroam");
+        //SceneTransitioner.transitionToScene("CharacterSelection");
+        SceneTransitioner.transitionToScene("Freeroam");
     }
 
     public void GoToMainMenu()
