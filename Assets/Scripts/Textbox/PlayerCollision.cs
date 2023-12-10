@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerCollision : MonoBehaviour
 {
     private PlayerMovement playerMovement; // Reference to the PlayerMovement script
     private Vector3 lastPosition; // Store the position right before the collision
     private Quaternion originalRotation; // Store the original rotation
+
+    public Tilemap itemsTilemap; // Reference to the "Items" Tilemap
+    private TilemapRenderer tilemapRenderer; // Reference to the TilemapRenderer component
 
     void Start()
     {
@@ -16,6 +20,9 @@ public class PlayerCollision : MonoBehaviour
 
         // Store the original rotation
         originalRotation = transform.rotation;
+
+        // Get the TilemapRenderer component from the "Items" Tilemap
+        tilemapRenderer = itemsTilemap.GetComponent<TilemapRenderer>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -29,6 +36,19 @@ public class PlayerCollision : MonoBehaviour
             if (playerMovement != null)
             {
                 playerMovement.BounceBack(lastPosition, originalRotation);
+            }
+
+            // You can add additional actions or logic here
+        }
+
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            Debug.Log("Player collided with the potion!");
+
+            // Disable the TilemapRenderer component to hide the "Items" Tilemap
+            if (tilemapRenderer != null)
+            {
+                tilemapRenderer.enabled = false;
             }
 
             // You can add additional actions or logic here
