@@ -54,11 +54,11 @@ namespace LP.TurnBasedStrategyTutorial
             ChangeTurn();
         }
 
-        private void ArrowAttack(GameObject target, float damage)
+        private void ArrowAttack(GameObject target)
         {
             if (target == enemy)
             {
-                //float damage = Random.Range(5, 15);
+                float damage = Random.Range(5, 15);
                 enemyHealth.value -= damage;
                 enemy1Health.value -= damage;
                 enemy2Health.value -= damage;
@@ -66,7 +66,7 @@ namespace LP.TurnBasedStrategyTutorial
             }
             else
             {
-                //float damage = Random.Range(5, 15);
+                float damage = Random.Range(5, 15);
                 playerHealth.value -= damage;
                 player1Health.value -= damage;
                 player2Health.value -= damage;
@@ -102,7 +102,7 @@ namespace LP.TurnBasedStrategyTutorial
 
         public void ButtonArrows()
         {
-            ArrowAttack(enemy, 99);
+            ArrowAttack(enemy);
         }
 
         public void ButtonHeal()
@@ -150,7 +150,7 @@ namespace LP.TurnBasedStrategyTutorial
         private void LoadGameOverScene()
         {
             // trigger next scene
-            SceneManager.LoadScene("Freeroam");
+            SceneTransitioner.transitionToScene("Freeroam");
         }
 
     }
