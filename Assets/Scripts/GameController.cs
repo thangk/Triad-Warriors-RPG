@@ -153,8 +153,6 @@ namespace LP.TurnBasedStrategyTutorial
             SceneManager.LoadScene("Freeroam");
         }
 
-        //test
-
     }
 }
 
