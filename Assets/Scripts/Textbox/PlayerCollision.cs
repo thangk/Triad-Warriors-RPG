@@ -59,7 +59,7 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("Player collided with the Door!");
 
-            SceneManager.LoadScene("Freeroam");
+            SceneManager.LoadScene("Area 1");
 
             // You can add additional actions or logic here
         }
