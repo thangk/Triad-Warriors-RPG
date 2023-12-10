@@ -1,24 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneTransitioner : MonoBehaviour
 {
-    private static string nextScene;
-    public static Animator animator;
+    private static SceneTransitioner instance; // Singleton instance
+    public static string nextScene;
+    public Animator animator; // Made non-static
+    public SO_GameStateManager gameStateManager;
 
     void Awake() {
-        animator = GetComponent<Animator>();
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null) {
+            instance = this;
+            animator = GetComponent<Animator>();
+
+            DontDestroyOnLoad(this.gameObject);
+        } else if (instance != this) {
+            Destroy(gameObject); // Destroy duplicate
+        }
+            gameStateManager.GoToMainMenu();
     }
 
-    public static void transitionToScene(string sceneName) {
-        animator.SetTrigger("fadeOut");
-        setNextScene(sceneName);
+    public static void TransitionToScene(string sceneName) {
+        if (instance != null) {
+            instance.animator.SetTrigger("fadeOut");
+            SetNextScene(sceneName);
+        } else {
+            Debug.LogError("No SceneTransitioner instance found!");
+        }
     }
 
-    public static void setNextScene(string sceneName) {
+    private static void SetNextScene(string sceneName) {
         nextScene = sceneName;
     }
 
