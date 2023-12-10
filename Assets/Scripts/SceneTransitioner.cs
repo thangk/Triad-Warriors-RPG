@@ -14,8 +14,18 @@ public class SceneTransitioner : MonoBehaviour
     }
 
     public static void transitionToScene(string sceneName) {
+        DestroyPersistents();
         animator.SetTrigger("fadeOut");
         setNextScene(sceneName);
+    }
+    private static void DestroyPersistents()
+    {
+        // Find objects marked with DontDestroyOnLoad and destroy them
+        GameObject[] persistents = GameObject.FindGameObjectsWithTag("Persistent");
+        foreach (GameObject persistent in persistents)
+        {
+            Destroy(persistent);
+        }
     }
 
     public static void setNextScene(string sceneName) {

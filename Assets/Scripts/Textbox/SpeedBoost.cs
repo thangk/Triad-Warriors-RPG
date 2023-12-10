@@ -75,5 +75,5 @@ public class SpeedBoost : MonoBehaviour
 
         // You can add additional actions or visual feedback here when the boost ends
         Debug.Log("Speed Boost Ended!");
-    }
+ }
 }

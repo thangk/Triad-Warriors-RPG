@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
             Vector2 movement = new Vector2(horizontal, vertical);
             transform.Translate(movement * speed * Time.deltaTime);
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            //SceneManager.LoadScene("MainMenu");
+            SceneTransitioner.transitionToScene("MainMenu");
+        }
+
     }
 
     public void StopMovement()
