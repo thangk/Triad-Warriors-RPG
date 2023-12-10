@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -50,6 +51,15 @@ public class PlayerCollision : MonoBehaviour
             {
                 tilemapRenderer.enabled = false;
             }
+
+            // You can add additional actions or logic here
+        }
+
+        if (collision.gameObject.CompareTag("Door"))
+        {
+            Debug.Log("Player collided with the Door!");
+
+            SceneManager.LoadScene("Freeroam");
 
             // You can add additional actions or logic here
         }
