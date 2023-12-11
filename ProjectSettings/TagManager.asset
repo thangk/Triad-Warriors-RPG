@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Persistent
   - Door
+  - Door2
   layers:
   - Default
   - TransparentFX
