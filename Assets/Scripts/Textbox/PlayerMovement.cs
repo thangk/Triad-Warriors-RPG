@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-
+    public float jumpHeight = 1f;
     private bool canMove = true;
     private Rigidbody2D rb;
 
@@ -29,12 +29,15 @@ public class PlayerMovement : MonoBehaviour
             Vector2 movement = new Vector2(horizontal, vertical);
             transform.Translate(movement * speed * Time.deltaTime);
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            //SceneManager.LoadScene("MainMenu");
-            SceneTransitioner.transitionToScene("MainMenu");
+            MoveUp();
         }
 
+    }
+    public void MoveUp()
+    {
+        transform.Translate(Vector3.up * jumpHeight);
     }
 
     public void StopMovement()
