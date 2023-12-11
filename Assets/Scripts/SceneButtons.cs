@@ -17,6 +17,11 @@ public class SceneButtons : MonoBehaviour
         SceneTransitioner.transitionToScene("MainMenu");
     }
 
+    public void GoToSettings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
     public void QuitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
