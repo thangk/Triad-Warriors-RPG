@@ -66,6 +66,15 @@ public class PlayerCollision : MonoBehaviour
 
             // You can add additional actions or logic here
         }
+
+        if (collision.gameObject.CompareTag("Door2"))
+        {
+            Debug.Log("Player collided with the Door!");
+
+            SceneManager.LoadScene("Area 2");
+
+            // You can add additional actions or logic here
+        }
     }
 
     void FixedUpdate()

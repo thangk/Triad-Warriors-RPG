@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Freeroam.unity
     guid: 63b05f4f77d15804fbe6f91cf37bdb40
   - enabled: 1
+    path: Assets/Scenes/Area 2.unity
+    guid: 1dbaef9efe323cd4cbd39ea86a19483e
+  - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: aef08f84fcb1af244bae77aa94f8459c
   m_configObjects: {}
