@@ -47,9 +47,12 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("Player collided with the potion!");
 
             // Disable the TilemapRenderer component to hide the "Items" Tilemap
-            if (tilemapRenderer != null)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                tilemapRenderer.enabled = false;
+                if (tilemapRenderer != null)
+                {
+                    tilemapRenderer.enabled = false;
+                }
             }
 
             // You can add additional actions or logic here
