@@ -620,6 +620,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Persistent
       objectReference: {fileID: 0}
+    - target: {fileID: 7412890480655363891, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412890480655363891, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 904060163}
+    - target: {fileID: 7412890480655363891, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412890480655363891, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneButtons, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7629445286777621315, guid: 8de650e4953be724c98b9e2b6795adb0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
